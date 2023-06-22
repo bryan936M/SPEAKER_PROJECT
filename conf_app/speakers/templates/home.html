@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speaker List</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .speaker-name {
+      font-weight: bold;
+    }
+
+    .speaker-topic {
+      color: #555;
+    }
+
+    .speaker-location {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Speaker List</h2>
+    <ul>
+      {% for speaker in speakers %}
+      <li>
+        <span class="speaker-name">{{ speaker.name }}</span><br>
+        <span class="speaker-topic">{{ speaker.topic }}</span><br>
+        <span class="speaker-location">{{ speaker.city }}, {{ speaker.country }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

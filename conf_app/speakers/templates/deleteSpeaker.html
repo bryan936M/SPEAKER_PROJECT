@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete Speaker</title>
+  <style>
+    /* CSS for artistic designs */
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    input[type="submit"] {
+      display: inline-block;
+      background-color: #f44336;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d32f2f;
+    }
+
+    .confirmation-text {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Delete Speaker</h2>
+    <p class="confirmation-text">Are you sure you want to delete the speaker?</p>
+    <p><strong>Name:</strong> {{ speaker.name }}</p>
+    <p><strong>Topic:</strong> {{ speaker.topic }}</p>
+    <p><strong>City:</strong> {{ speaker.city }}</p>
+    <p><strong>Country:</strong> {{ speaker.country }}</p>
+    <form action="#" method="post">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
+</body>
+</html>
